@@ -4,14 +4,10 @@ let prevNum = null; // operand b
 let selectedOperator = null;
 
 // SELECT ELEMENTS
-// select all class="small-btn"
-const smallBtns = document.querySelectorAll(".small-btn");
-// select id="clear-btn"
-const clearBtn = document.getElementById("clear-btn");
-// select id="top-display-text"
-const topDisplayText = document.getElementById("top-display-text");
-// select id="bottom-display-text"
-const bottomDisplayText = document.getElementById("bottom-display-text");
+const functionBtns = document.querySelectorAll(".calculator__function-btns-wrapper > .calculator__btn");
+const clearBtn = document.querySelector(".calculator__btn--clear");
+const topDisplayText = document.querySelector(".calculator__display--top");
+const bottomDisplayText = document.querySelector(".calculator__display--bottom");
 
 // DEFINE FNS
 function sum(a, b) {
@@ -45,7 +41,7 @@ function operate() {
     }
 }
 
-function onCalculatorSmallBtnClick() { 
+function onCalculatorfunctionBtnClick() { 
     let result = null;
     let char = this.innerText;
     
@@ -108,6 +104,7 @@ function onCalculatorSmallBtnClick() {
         if (prevNum === null && numStr === "") {
             result = "Error: specify numbers to calculate";
         }
+        
         bottomDisplayText.innerText = result;
     }
 }
@@ -121,19 +118,7 @@ function onClearButtonClick() {
 }
 
 // EVENT LISTENERS
-smallBtns.forEach(smallBtn => {
-    smallBtn.addEventListener("click", onCalculatorSmallBtnClick);
+functionBtns.forEach(functionBtn => {
+    functionBtn.addEventListener("click", onCalculatorfunctionBtnClick);
 });
 clearBtn.addEventListener("click", onClearButtonClick);
-
-
-
-// TODO
-
-// OK round up results to 3 dec
-// OK if result is 0 -> replace by ...
-// OK add clear -> clear any existing data
-// OK add error if press = before entering pair of numbers
-// OK add no multiple . check -> if numStr contains "." -> pressing button doesn't do anything
-
-
