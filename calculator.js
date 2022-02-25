@@ -5,9 +5,9 @@ let selectedOperator = null;
 
 // SELECT ELEMENTS
 const functionBtns = document.querySelectorAll(".calculator__function-btns-wrapper > .calculator__btn");
-const clearBtn = document.querySelector(".calculator__btn--clear");
-const topDisplayText = document.querySelector(".calculator__display--top");
-const bottomDisplayText = document.querySelector(".calculator__display--bottom");
+const clearBtn = document.getElementById("clear-btn");
+const topScreenText = document.getElementById("calculator-screen-top");
+const bottomScreenText = document.getElementById("calculator-screen-bottom");
 
 // DEFINE FNS
 function sum(a, b) {
@@ -50,12 +50,9 @@ function onCalculatorfunctionBtnClick() {
             return;
         }
         numStr += char;
-        console.log(typeof numStr);
-        console.log(numStr);
-
-        bottomDisplayText.innerText = numStr;
+        bottomScreenText.innerText = numStr;
         if (prevNum !== null) {
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
         }
     }
 
@@ -65,9 +62,8 @@ function onCalculatorfunctionBtnClick() {
             selectedOperator = char;
             prevNum = parseFloat(numStr);
             numStr = "";
-
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
-            bottomDisplayText.innerText = prevNum;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
+            bottomScreenText.innerText = prevNum;
         }
         // CASE TWO: if both operands defined
         else if (prevNum !== null && numStr !== "") {
@@ -75,37 +71,35 @@ function onCalculatorfunctionBtnClick() {
             prevNum = result;
             numStr = "";
             selectedOperator = char;
-
-            topDisplayText.innerText = `${result} ${selectedOperator}`;
-            bottomDisplayText.innerText = result;
+            topScreenText.innerText = `${result} ${selectedOperator}`;
+            bottomScreenText.innerText = result;
         }
         // CASE THREE: if click on different operators in a row
         else if (prevNum !== null && numStr === "") {
             selectedOperator = char;
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
-            bottomDisplayText.innerText = prevNum;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
+            bottomScreenText.innerText = prevNum;
         }
         // CASE FOUR: if operate with undefined operand b
         else if (numStr === "") {
             selectedOperator = char;
             prevNum = 0;
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
-            bottomDisplayText.innerText = prevNum;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
+            bottomScreenText.innerText = prevNum;
         }
     }
     
     if (char === "=") {
         if (prevNum !== null && numStr !== "") {
             result = operate();
-            topDisplayText.innerText = `${prevNum} ${selectedOperator} ${numStr} =`;
+            topScreenText.innerText = `${prevNum} ${selectedOperator} ${numStr} =`;
             prevNum = null;
             numStr = result;
         }
         if (prevNum === null && numStr === "") {
             result = "Error: specify numbers to calculate";
         }
-        
-        bottomDisplayText.innerText = result;
+        bottomScreenText.innerText = result;
     }
 }
 
@@ -113,8 +107,8 @@ function onClearButtonClick() {
     numStr = "";
     prevNum = null;
     selectedOperator = null;
-    topDisplayText.innerText = "";
-    bottomDisplayText.innerText = "";
+    topScreenText.innerText = "";
+    bottomScreenText.innerText = "";
 }
 
 // EVENT LISTENERS
