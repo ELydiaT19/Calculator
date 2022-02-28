@@ -4,7 +4,7 @@ let prevNum = null; // operand b
 let selectedOperator = null;
 
 // SELECT ELEMENTS
-const functionBtns = document.querySelectorAll(".calculator__function-btns-wrapper > .calculator__btn");
+const functionBtns = document.querySelectorAll(".calculator__btns > .calculator__btn");
 const clearBtn = document.getElementById("clear-btn");
 const topScreenText = document.getElementById("calculator-screen-top");
 const bottomScreenText = document.getElementById("calculator-screen-bottom");

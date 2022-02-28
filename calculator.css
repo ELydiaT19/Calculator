@@ -35,7 +35,7 @@ body {
     color: #212121;
 }
 
-.calculator__logo-btn-wrapper {
+.calculator__toolbar {
     display: flex;
     justify-content: space-between;
 }
@@ -71,7 +71,7 @@ body {
     padding: 8px;
 }
 
-.calculator__function-btns-wrapper {
+.calculator__btns {
     display: grid;
     grid-template-columns: repeat(4, auto);
 }
