@@ -6,7 +6,7 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 <br>Created as part of The odin Project full stack Javascript <a href="https://www.theodinproject.com/lessons/javascript-library">curriculum</a>.
 - Built using: **HTML**, **CSS**, **Javascript**
 
-#### ► See live preview <a href="">here</a> 👀
+#### ► <a href="">Live demo</a> 👀
 
 
 ## Overview
