@@ -30,4 +30,4 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 - Practiced `Math.round()` method
 - Practiced printing variables' values in **DOM** elements
 - Practiced **event listeners** with button click events
-- Practiced CSS **grids**
+- Practiced CSS **grids** & **flexbox**
