@@ -25,9 +25,9 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 
 
 ## Takeaways
-- Learned **regex** (regular expressions) basics and how to use them in conditional statements 
+- Learned basics of **regex** (regular expressions) and how to use them in conditional statements 
 (e.g. `if (/[0-9.]/.test(char) {...}` )
 - Practiced `Math.round()` method
 - Practiced printing variables' values in **DOM** elements
 - Practiced **event listeners** with button click events
-- Practiced CSS **grids** & **flexbox**
+- Practiced **CSS Grid** & **CSS Flexbox**
