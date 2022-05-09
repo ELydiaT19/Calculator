@@ -28,6 +28,6 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 - Learned **regex** (regular expressions) basics and how to use them in conditional statements 
 (e.g. `if (/[0-9.]/.test(char) {...}` )
 - Practiced `Math.round()` method
-- Practiced displaying variables' values in **DOM** elements
+- Practiced printing variables' values in **DOM** elements
 - Practiced **event listeners** with button click events
 - Practiced CSS **grids**
