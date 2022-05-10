@@ -28,7 +28,7 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 - macOS Terminal
 
 ### 💙 Credits
-- Referred to <a href="https://github.com/michalosman/calculator">michalosman's project</a> to understand the logic of the user interaction with the calculator, and figure out potential scenarios where bugs could occur and how to prevent them
+- Referred to <a href="https://github.com/michalosman/calculator">michalosman's project</a> to understand the logic of the user interaction with the calculator, and figure out potential bug scenarios in order to prevent them
 
 
 ## Takeaways
