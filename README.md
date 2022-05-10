@@ -17,7 +17,7 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 
 
 ## Built with
-### Technologies
+### 🪄 Technologies
 - JS
 - CSS
 - HTML
