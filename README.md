@@ -5,7 +5,7 @@
 Simple browser calculator app, allowing user to add, subtract, multiply and divide numbers using the provided UI.
 <br>Created as part of The odin Project Web Development Foundations <a href="https://www.theodinproject.com/lessons/foundations-calculator">curriculum</a>.
 
-#### ► <a href="">Live demo</a> 👀
+#### ► <a href="https://emilielydiat.github.io/calculator/">Live demo</a> 👀
 
 #### Features
 - Multiple operations supported: **add, subtract, multiply, divide** 
