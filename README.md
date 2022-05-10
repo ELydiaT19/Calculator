@@ -38,3 +38,4 @@ Simple browser calculator app, allowing user to add, subtract, multiply and divi
 - Practiced printing variables' values in **DOM** elements
 - Practiced **event listeners** with button click events
 - Practiced **CSS Grid** & **CSS Flexbox**
+- Practiced **BEM naming convention** for CSS classes 
