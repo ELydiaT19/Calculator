@@ -4,14 +4,10 @@ let prevNum = null; // operand b
 let selectedOperator = null;
 
 // SELECT ELEMENTS
-// select all class="small-btn"
-const smallBtns = document.querySelectorAll(".small-btn");
-// select id="clear-btn"
+const functionBtns = document.querySelectorAll(".calculator__btns > .calculator__btn");
 const clearBtn = document.getElementById("clear-btn");
-// select id="top-display-text"
-const topDisplayText = document.getElementById("top-display-text");
-// select id="bottom-display-text"
-const bottomDisplayText = document.getElementById("bottom-display-text");
+const topScreenText = document.getElementById("calculator-screen-top");
+const bottomScreenText = document.getElementById("calculator-screen-bottom");
 
 // DEFINE FNS
 function sum(a, b) {
@@ -45,7 +41,7 @@ function operate() {
     }
 }
 
-function onCalculatorSmallBtnClick() { 
+function onCalculatorfunctionBtnClick() { 
     let result = null;
     let char = this.innerText;
     
@@ -54,12 +50,9 @@ function onCalculatorSmallBtnClick() {
             return;
         }
         numStr += char;
-        console.log(typeof numStr);
-        console.log(numStr);
-
-        bottomDisplayText.innerText = numStr;
+        bottomScreenText.innerText = numStr;
         if (prevNum !== null) {
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
         }
     }
 
@@ -69,9 +62,8 @@ function onCalculatorSmallBtnClick() {
             selectedOperator = char;
             prevNum = parseFloat(numStr);
             numStr = "";
-
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
-            bottomDisplayText.innerText = prevNum;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
+            bottomScreenText.innerText = prevNum;
         }
         // CASE TWO: if both operands defined
         else if (prevNum !== null && numStr !== "") {
@@ -79,36 +71,35 @@ function onCalculatorSmallBtnClick() {
             prevNum = result;
             numStr = "";
             selectedOperator = char;
-
-            topDisplayText.innerText = `${result} ${selectedOperator}`;
-            bottomDisplayText.innerText = result;
+            topScreenText.innerText = `${result} ${selectedOperator}`;
+            bottomScreenText.innerText = result;
         }
         // CASE THREE: if click on different operators in a row
         else if (prevNum !== null && numStr === "") {
             selectedOperator = char;
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
-            bottomDisplayText.innerText = prevNum;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
+            bottomScreenText.innerText = prevNum;
         }
         // CASE FOUR: if operate with undefined operand b
         else if (numStr === "") {
             selectedOperator = char;
             prevNum = 0;
-            topDisplayText.innerText = `${prevNum} ${selectedOperator}`;
-            bottomDisplayText.innerText = prevNum;
+            topScreenText.innerText = `${prevNum} ${selectedOperator}`;
+            bottomScreenText.innerText = prevNum;
         }
     }
     
     if (char === "=") {
         if (prevNum !== null && numStr !== "") {
             result = operate();
-            topDisplayText.innerText = `${prevNum} ${selectedOperator} ${numStr} =`;
+            topScreenText.innerText = `${prevNum} ${selectedOperator} ${numStr} =`;
             prevNum = null;
             numStr = result;
         }
         if (prevNum === null && numStr === "") {
             result = "Error: specify numbers to calculate";
         }
-        bottomDisplayText.innerText = result;
+        bottomScreenText.innerText = result;
     }
 }
 
@@ -116,24 +107,12 @@ function onClearButtonClick() {
     numStr = "";
     prevNum = null;
     selectedOperator = null;
-    topDisplayText.innerText = "";
-    bottomDisplayText.innerText = "";
+    topScreenText.innerText = "";
+    bottomScreenText.innerText = "";
 }
 
 // EVENT LISTENERS
-smallBtns.forEach(smallBtn => {
-    smallBtn.addEventListener("click", onCalculatorSmallBtnClick);
+functionBtns.forEach(functionBtn => {
+    functionBtn.addEventListener("click", onCalculatorfunctionBtnClick);
 });
 clearBtn.addEventListener("click", onClearButtonClick);
-
-
-
-// TODO
-
-// OK round up results to 3 dec
-// OK if result is 0 -> replace by ...
-// OK add clear -> clear any existing data
-// OK add error if press = before entering pair of numbers
-// OK add no multiple . check -> if numStr contains "." -> pressing button doesn't do anything
-
-

@@ -1,52 +1,41 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <script src="calculator.js" defer></script>
     <link rel="stylesheet" href="calculator.css">
 </head>
 
 <body>
-    <div class="calculator-container">
-        <div class="display">
-            <span id="top-display-text"></span>
-            <span id="bottom-display-text"></span>
+    <div class="calculator">
+        <div class="calculator__screen">
+            <span class="calculator__screen-top" id="calculator-screen-top"></span>
+            <span class="calculator__screen-bottom" id="calculator-screen-bottom"></span>
         </div>
-        <div class="big-btn-div"> 
-            <div class="logo-div">
-                <span id="top-logo-text">mawulator 1.0</span>
-                <span id="bottom-logo-text">i.../ᐠ｡ꞈ｡ᐟ\</span> 
+        <div class="calculator__toolbar"> 
+            <div class="calculator__logo">
+                <span class="calculator__logo-top">mawulator 1.0</span>
+                <span class="calculator__logo-bottom">i.../ᐠ｡ꞈ｡ᐟ\</span> 
             </div>
-            <button class="big-btn" id="clear-btn">Clear</button>
+            <button class="calculator__btn calculator__btn--clear" id="clear-btn">Clear</button>
         </div>
-        <div class="small-btn-div">
-            <button class="small-btn">7</button>
-            <button class="small-btn">8</button>
-            <button class="small-btn">9</button>
-            <button class="small-btn">÷</button>
-            <button class="small-btn">4</button>
-            <button class="small-btn">5</button>
-            <button class="small-btn">6</button>
-            <button class="small-btn">x</button>
-            <button class="small-btn">1</button>
-            <button class="small-btn">2</button>
-            <button class="small-btn">3</button>
-            <button class="small-btn">-</button>
-            <button class="small-btn">.</button>
-            <button class="small-btn">0</button>
-            <button class="small-btn">=</button>
-            <button class="small-btn">+</button>
+        <div class="calculator__btns">
+            <button class="calculator__btn">7</button>
+            <button class="calculator__btn">8</button>
+            <button class="calculator__btn">9</button>
+            <button class="calculator__btn">÷</button>
+            <button class="calculator__btn">4</button>
+            <button class="calculator__btn">5</button>
+            <button class="calculator__btn">6</button>
+            <button class="calculator__btn">x</button>
+            <button class="calculator__btn">1</button>
+            <button class="calculator__btn">2</button>
+            <button class="calculator__btn">3</button>
+            <button class="calculator__btn">-</button>
+            <button class="calculator__btn">.</button>
+            <button class="calculator__btn">0</button>
+            <button class="calculator__btn">=</button>
+            <button class="calculator__btn">+</button>
         </div>
     </div>
 </body>
-
-
 </html>
-
-<!-- 
-calculator = component -> div called "calculator"
-
-
-
-
-
--->
