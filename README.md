@@ -3,7 +3,7 @@
 
 ## About the project
 Simple browser calculator app, allowing user to add, subtract, multiply and divide numbers using the provided UI.
-<br>Created as part of The odin Project full stack Javascript <a href="https://www.theodinproject.com/lessons/javascript-library">curriculum</a>.
+<br>Created as part of The odin Project Web Development Foundations <a href="https://www.theodinproject.com/lessons/foundations-calculator">curriculum</a>.
 
 #### ► <a href="">Live demo</a> 👀
 
